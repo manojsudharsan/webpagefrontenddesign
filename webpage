@@ -4,8 +4,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.sidebar{
+/*.sidebar{
 	position:fixed;
 	width:50px;
 	top:0;
@@ -13,14 +14,23 @@
 	bottom:0;
 	background:#ffdb99;
 	padding-top:50px;
-	}
+	}*/
 .searchbar input[type=text]{
 	width:80%;
 	border:2px solid #aaa;
 	border-radius:4px;
 	margin:8px 40px 20px 80px;
-	
 	}
+.arrow{
+		border:solid black;
+		border-width:0 3px 3px 0;
+		display:inline-block;
+		padding:3px;
+		}
+.down{
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
 	
 #rect1{
 	width:550px;
@@ -33,9 +43,9 @@
 
 	
 #boxes{
-	width:90%;
+	width:100%;
 	overflow:hidden;
-	margin:20px auto;
+	margin:20px;
 	padding:20px;
 	}
 #boxes li{
@@ -44,9 +54,7 @@
 	width:20%;
 	height:200px;
 	padding:20px;
-	margin:0px 220px 0px 45px;
-	background-image:url('download (1).jpg');
-	background-image:url('download.jpg');
+	margin:0px 150px 0px 45px;
 	background-size:200px 200px;
 	
 }
@@ -55,13 +63,44 @@
 	padding:40px;
 	margin:0px 220px 0px 45px;
 	}
+.icon-bar {
+  position:fixed;
+  width: 50px; 
+  background-color: #ffdb99; 
+}
+
+.icon-bar a {
+  display: block; 
+  text-align: center; 
+  padding-top:50px;
+   
+  color: white; 
+  font-size: 36px; 
+}
+
+.icon-bar a:hover {
+  background-color: #ffdb99; 
+}
+
+.active {
+  background-color: #ffdb99; 
+}
 </style>
 </head>
 <body style="background-color:#F8F8FF;">
-<div class="sidebar">
+
+
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
 </div>
 <div class="searchbar">
  <input type="text" placeholder="Search">
+ <i class="arrow down"></i>
 </div>
 <h2 id="tex"> Courses</h2>
 <div class="btn">
@@ -70,10 +109,13 @@
  </div>
 <div class="btn" id="boxes">
  <ul>
-	<li>UI/UX Design</li>
-	<li>Graphic Design</li>
-	
+	<li style="background-image:url('download (1).jpg');">UI/UX Design</li>
+	<li style="background-image:url('download.jpg');">Graphic Design</li>
+	<li style="background-color:#ffdb99";>ACHIEVEMENTS</li>
+	<li style="background-color:green";>Courses</li>
  </ul>	
  </div>
+ <div class="sidebar">
+</div>
 </body>
 </html>
